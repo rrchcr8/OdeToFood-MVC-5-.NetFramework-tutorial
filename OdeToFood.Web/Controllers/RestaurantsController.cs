@@ -21,7 +21,12 @@ namespace OdeToFood.Web.Controllers
         {
             var model = db.GetAll();
             return View(model);
+        }
 
+        public ActionResult Details(int id)
+        {
+            var model = db.Get(id);
+            return View(model);
         }
     }
 }
